@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Cucumber Suite" verbose="1" >
+<!--    <test name="package">-->
+<!--        <packages>-->
+<!--            <package name="resources"/>-->
+<!--        </packages>-->
+<!--    </test>-->
+    <test name="class">
+        <classes>
+            <class name="testrunners.BasicTestRunner"></class>
+        </classes>
+    </test>
+</suite>
