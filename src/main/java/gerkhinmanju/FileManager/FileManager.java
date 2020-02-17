@@ -4,14 +4,14 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileContent {
+public class FileManager {
 
     public String sFilePath = null;
     public File fileFolder = null;
     public List<File> res = new ArrayList<File>();
 
 
-    public FileContent(String Folder){
+    public FileManager(String Folder){
         this.sFilePath = Folder;
         this.fileFolder = new File(this.sFilePath);
     }

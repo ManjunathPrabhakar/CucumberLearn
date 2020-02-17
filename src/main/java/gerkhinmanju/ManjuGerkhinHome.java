@@ -1,7 +1,6 @@
 package gerkhinmanju;
 
-import gerkhinmanju.FileManager.FileContent;
-import io.cucumber.java.bs.A;
+import gerkhinmanju.FileManager.FileManager;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,12 +21,14 @@ public class ManjuGerkhinHome {
 
         String sGenFeatureFilePath = "\\src\\test\\resources\\generatedfeaturefiles";
         String sGenTestRunnerFilePath = "\\src\\test\\java\\generatedtestrunners";
+        String sTemplatePath = "\\src\\main\\java\\gerkhinmanju\\TestRunnerTemplate";
+        String sTags = "";
 
 
-        FileContent featurecontent = new FileContent(sHome + sFeaturesHome);
+        FileManager featurecontent = new FileManager(sHome + sFeaturesHome);
         featurefiles = featurecontent.getFiles(".feature");
 
-        FileContent stepdefcontent = new FileContent(sHome + sGlueHome);
+        FileManager stepdefcontent = new FileManager(sHome + sGlueHome);
         stepDefs = stepdefcontent.getFiles(".java");
 
         ////////////////////////////////////////////////////
