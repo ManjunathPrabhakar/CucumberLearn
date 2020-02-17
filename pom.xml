@@ -7,6 +7,7 @@
     <groupId>com.manjunath</groupId>
     <artifactId>CucumberFramework</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>CucumberFramework</name>
     <contributors>
@@ -19,13 +20,45 @@
         </contributor>
     </contributors>
 
+
     <build>
         <plugins>
-
+            <plugin>
+                <groupId>org.manjunath.exampleplugin</groupId>
+                <artifactId>manju-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <command>HelloBro!!</command>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>version</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.maven</groupId>-->
+<!--            <artifactId>maven-plugin-api</artifactId>-->
+<!--            <version>3.6.0</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugin-tools/maven-plugin-annotations &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.maven.plugin-tools</groupId>-->
+<!--            <artifactId>maven-plugin-annotations</artifactId>-->
+<!--            <version>3.4</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
+
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
